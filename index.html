@@ -3,33 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Максим & Ангелина — Приглашение на свадьбу</title>
+<title>Максим & Ангелина</title>
+
 <link href="https://fonts.cdnfonts.com/css/complex" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:'Complex',serif;background:#f4efec;color:#2c2c2c;text-align:center}
 
-/* INTRO ENVELOPE */
-#intro{position:fixed;inset:0;background:#f4efec;display:flex;align-items:center;justify-content:center;z-index:10}
-.envelope{width:260px;height:180px;position:relative;cursor:pointer;transition:transform .6s}
-.envelope:hover{transform:scale(1.05)}
-
-.envelope-body{
-width:100%;height:100%;background:#e8ddd6;border-radius:6px;position:absolute;bottom:0;left:0;
+body{
+margin:0;
+font-family:'Complex',serif;
+background:#f5f1ee;
+text-align:center;
+color:#2b2b2b;
 }
 
-.envelope-flap{
-width:0;height:0;border-left:130px solid transparent;border-right:130px solid transparent;border-bottom:90px solid #d8cbc3;position:absolute;top:-90px;left:0;transform-origin:bottom;transition:transform .8s
+section{
+padding:80px 20px;
 }
 
-.open .envelope-flap{transform:rotateX(180deg)}
+h1{
+font-size:50px;
+margin:0;
+}
 
-.open-text{margin-top:220px;font-size:18px;letter-spacing:2px}
-
-/* MAIN */
-#site{display:none}
-section{padding:70px 20px}
+h2{
+font-size:34px;
+margin-bottom:20px;
+}
 
 .hero{
 height:100vh;
@@ -37,48 +37,32 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc');
-background-size:cover;
-background-position:center;
+background:#000;
 color:white;
 }
 
-h1{font-size:52px;margin:0}
-.date{margin-top:15px;font-size:22px;letter-spacing:3px}
-.timer{margin-top:25px;font-size:26px}
-
-.open-btn{
-margin-top:30px;
-padding:14px 28px;
-background:white;
-border:none;
-border-radius:30px;
-font-size:16px;
-cursor:pointer
-}
-
-.block{max-width:850px;margin:auto}
-
-h2{font-size:34px;margin-bottom:20px}
-
-p{font-size:18px;line-height:1.6}
-
-.map iframe{border-radius:12px}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-gap:12px;
-margin-top:20px
-}
-
 .photo{
-height:160px;
-background:#ddd;
-border-radius:10px;
-display:flex;
-align-items:center;
-justify-content:center
+max-width:800px;
+margin:auto;
+}
+
+.photo img{
+width:100%;
+border-radius:12px;
+}
+
+.name{
+font-size:38px;
+margin-top:20px;
+}
+
+.timer{
+font-size:28px;
+margin-top:20px;
+}
+
+.map iframe{
+border-radius:12px;
 }
 
 form{
@@ -86,7 +70,7 @@ max-width:420px;
 margin:auto;
 display:flex;
 flex-direction:column;
-gap:12px
+gap:12px;
 }
 
 input,select,button{
@@ -94,41 +78,24 @@ padding:12px;
 font-family:'Complex',serif;
 font-size:16px;
 border-radius:8px;
-border:1px solid #ccc
+border:1px solid #ccc;
 }
 
-button{background:#2c2c2c;color:white;border:none;cursor:pointer}
-
-.music{
-position:fixed;
-bottom:18px;
-right:18px;
-background:white;
-padding:10px 16px;
-border-radius:30px;
-box-shadow:0 6px 18px rgba(0,0,0,.2);
+button{
+background:#2b2b2b;
+color:white;
 cursor:pointer;
-font-size:14px
 }
 
-footer{padding:40px;background:#eee;font-size:14px}
+footer{
+padding:40px;
+background:#eee;
+}
 
-/* MOBILE */
-@media (max-width:600px){
+@media(max-width:600px){
 
-h1{font-size:38px}
-
-.date{font-size:18px}
-
-.timer{font-size:20px}
-
-section{padding:50px 18px}
-
-h2{font-size:28px}
-
-p{font-size:16px}
-
-.envelope{transform:scale(.9)}
+h1{font-size:34px}
+h2{font-size:26px}
 
 }
 
@@ -137,56 +104,101 @@ p{font-size:16px}
 
 <body>
 
-<!-- OPENING ANIMATION -->
-<div id="intro">
- <div>
-  <div class="envelope" id="envelope" onclick="openInvite()">
-   <div class="envelope-flap"></div>
-   <div class="envelope-body"></div>
-  </div>
-  <div class="open-text">Открыть приглашение</div>
- </div>
+<!-- Детское фото Максима -->
+
+<section>
+
+<div class="photo">
+
+<img src="maxim-child.jpg">
+
+<div class="name">Максимка</div>
+
 </div>
 
-<!-- SITE -->
-<div id="site">
-
-<section class="hero">
-<h1>Максим & Ангелина</h1>
-<div class="date">26 июня 2026</div>
-<div class="timer" id="timer"></div>
-<button class="open-btn" onclick="scrollInvite()">Подробнее</button>
 </section>
 
-<section id="invite">
-<div class="block">
+<!-- Детское фото Ангелины -->
+
+<section>
+
+<div class="photo">
+
+<img src="angelina-child.jpg">
+
+<div class="name">Ангелинка</div>
+
+</div>
+
+</section>
+
+<!-- Фото пары -->
+
+<section>
+
+<div class="photo">
+
+<img src="couple.jpg">
+
+</div>
+
+</section>
+
+<!-- Приглашение -->
+
+<section>
+
 <h2>Дорогие родные и друзья</h2>
+
 <p>
-Мы будем счастливы разделить с вами один из самых важных дней нашей жизни — день нашей свадьбы.
+
+Мы рады сообщить вам, что  
+<strong>26 июня 2026</strong>  
+состоится самый важный день в нашей жизни —  
+<strong>день нашей свадьбы.</strong>
+
 </p>
-</div>
+
+<p>
+
+Будем счастливы разделить этот день вместе с вами.
+
+</p>
+
 </section>
 
+<!-- Таймер -->
+
 <section>
-<div class="block">
-<h2>Когда и где</h2>
-<p><b>26 июня 2026</b></p>
-<p>Начало в 16:00</p>
+
+<h2>До свадьбы осталось</h2>
+
+<div class="timer" id="timer"></div>
+
+</section>
+
+<!-- Карта -->
+
+<section>
+
+<h2>Место проведения</h2>
+
 <div class="map">
-<iframe src="https://maps.google.com/maps?q=54.696771,53.769545&z=15&output=embed" width="100%" height="320"></iframe>
+
+<iframe
+src="https://maps.google.com/maps?q=54.696771,53.769545&z=15&output=embed"
+width="100%"
+height="320">
+</iframe>
+
 </div>
-</div>
+
 </section>
 
-<section>
-<div class="block">
-<h2>Дресс‑код</h2>
-<p>Будем рады видеть вас в светлых и пастельных оттенках.</p>
-</div>
-</section>
+<!-- RSVP -->
 
 <section>
-<div class="block">
+
 <h2>Подтвердите присутствие</h2>
 
 <form id="rsvpForm">
@@ -194,15 +206,19 @@ p{font-size:16px}
 <input type="text" name="name" placeholder="Ваше имя" required>
 
 <select name="attendance" required>
+
 <option value="">Выберите вариант</option>
 <option>Приду</option>
 <option>К сожалению не смогу</option>
+
 </select>
 
 <select name="plusone">
+
 <option value="">Будете с половинкой?</option>
 <option>Да</option>
 <option>Нет</option>
+
 </select>
 
 <button type="submit">Отправить</button>
@@ -211,52 +227,22 @@ p{font-size:16px}
 
 <p id="formStatus"></p>
 
-</div>
-</section>
-
-<section>
-<div class="block">
-<h2>Наши фотографии</h2>
-<div class="gallery">
-<div class="photo">Фото</div>
-<div class="photo">Фото</div>
-<div class="photo">Фото</div>
-</div>
-</div>
 </section>
 
 <footer>
-Максим ❤ Ангелина · 26.06.2026
+
+Максим ❤ Ангелина  
+26.06.2026
+
 </footer>
 
-</div>
+<audio autoplay loop>
 
-<div class="music" onclick="toggleMusic()">♫ Музыка</div>
-
-<audio id="music" loop>
 <source src="Highway_to_Hell.mp3" type="audio/mpeg">
+
 </audio>
 
 <script>
-
-/* OPEN INVITE */
-function openInvite(){
-
- document.getElementById("envelope").classList.add("open");
-
- setTimeout(()=>{
- document.getElementById("intro").style.display="none";
- document.getElementById("site").style.display="block";
- playMusic();
- },900);
-
-}
-
-function scrollInvite(){
- document.getElementById('invite').scrollIntoView({behavior:'smooth'})
-}
-
-/* TIMER */
 
 const weddingDate=new Date("2026-06-26T16:00:00").getTime();
 const timer=document.getElementById("timer");
@@ -270,50 +256,29 @@ const days=Math.floor(distance/(1000*60*60*24));
 const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
 const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
 
-if(timer){
- timer.innerHTML=days+" дней "+hours+" часов "+minutes+" минут";
-}
+timer.innerHTML=days+" дней "+hours+" часов "+minutes+" минут";
 
 },1000);
 
-/* MUSIC */
 
-const music=document.getElementById('music');
+// Google Sheets
 
-function playMusic(){
-
-const playPromise=music.play();
-
-if(playPromise!==undefined){
- playPromise.catch(()=>{
- document.body.addEventListener('click',()=>music.play(),{once:true});
- });
-}
-
-}
-
-function toggleMusic(){
-if(music.paused){music.play()}else{music.pause()}
-}
-
-/* RSVP */
-
-const scriptURL="PASTE_GOOGLE_SCRIPT_URL_HERE";
+const scriptURL="https://script.google.com/macros/s/AKfycbwL4eRQd-dCRjgfkLAFleBJHLJxxqFmQWxZY0Pc6oWdiGFLiOB3LwtrnDWIUh6WkhqD/exec";
 const form=document.getElementById('rsvpForm');
 
 form.addEventListener('submit',e=>{
 
- e.preventDefault();
- const formData=new FormData(form);
+e.preventDefault();
+const formData=new FormData(form);
 
- fetch(scriptURL,{method:'POST',body:formData})
- .then(()=>{
- document.getElementById('formStatus').innerText="Спасибо! Ответ отправлен";
- form.reset();
- })
- .catch(()=>{
- document.getElementById('formStatus').innerText="Ошибка отправки";
- });
+fetch(scriptURL,{method:'POST',body:formData})
+.then(()=>{
+document.getElementById('formStatus').innerText="Спасибо! Ответ отправлен";
+form.reset();
+})
+.catch(()=>{
+document.getElementById('formStatus').innerText="Ошибка отправки";
+});
 
 });
 
